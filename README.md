@@ -1,7 +1,17 @@
-# Vue 3 + Vite
+# Tasks App with Vue 3 and Laravel 10 Breeze Api
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A simple tasks app in Vue 3 with Laravel 10 Breeze Api authentication, axios, laravel-vue-pagination, vue router, pinia and tailwind.
 
-## Recommended IDE Setup
+# How to install
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+Before: Make sure you have installed the api-laravel project here : `https://github.com/molodoi/api-laravel`
+
+1. Make: `git clone git@github.com:molodoi/vue-tasks-laravel-breeze-api.git`
+2. Make: `cd vue-tasks-laravel-breeze-api`
+3. Make: `npm install`
+4. Make: `npm run dev`
+5. Go localhost: `http://localhost:5174`
+
+# Screenshot
+
+![Screenshot](./vue-tasks.png)

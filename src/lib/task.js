@@ -5,12 +5,14 @@ import axios from "../lib/axios";
 export default function useTasks() {
     const tasks = ref([]);
     const task = ref([]);
+    const currentPage = ref(1);
     const errors = ref({});
     const router = useRouter();
 
-    const getTasks = async () => {
-        const response = await axios.get("/api/v1/tasks");
-        tasks.value = response.data.data;
+    const getTasks = async (page = 1) => {
+        const response = await axios.get(`/api/v1/tasks?page=${page}`);
+        tasks.value = response.data;
+        currentPage.value = page;
     };
 
     const getTask = async (id) => {
@@ -45,12 +47,12 @@ export default function useTasks() {
             return;
         }
         await axios.delete("/api/v1/tasks/" + id);
-        await getTasks();
+        await getTasks(currentPage.value);
     };
 
     const updateStatusTask = async (id) => {
         await axios.put("/api/v1/tasks/status/" + id).then((res) => res.data);
-        await getTasks();
+        await getTasks(currentPage.value);
     };
 
     return {

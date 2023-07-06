@@ -1,5 +1,4 @@
 <script setup>
-import { onMounted } from "vue";
 import NavbarVue from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
 import AdminLayout from "./views/admin/AdminLayout.vue";
